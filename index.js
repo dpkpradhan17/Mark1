@@ -1,7 +1,9 @@
-var readlineSync= require("readline-sync");
-var userName= readlineSync.question("What is your username? ")
+var readlineSync= require("readline-sync"); //declaring readlineSync
+var userName= readlineSync.question("What is your username? ") //taking username
 console.log("Namaste! "+userName +" Welcome to the Online Quiz" )
 var score= 0;
+
+//Maintaining a database for comparision of high scores
 var highScore=[
   {
     user: "dpkpradhan17",
@@ -21,6 +23,7 @@ var highScore=[
   }
 ];
 
+//function to display QnA and check the answer + updating the score
 function play(question, answer){
   var state=readlineSync.question(question)
   if(state===answer){
@@ -33,7 +36,7 @@ function play(question, answer){
   console.log("Your score is: "+score)
   console.log("--------------")
 }
-
+//Array of questions
 var questions=[{question: "What is my full name? ",
                answer: "deepak pradhan"},
               {question: "Where do I live? ", 
@@ -41,6 +44,7 @@ var questions=[{question: "What is my full name? ",
               {question:"Where did i completed my school? ", 
                answer:"ellenabad"}];
 
+//calling function
 for (i=0;i<questions.length;i++){
   var quiz=questions[i];
   play(quiz.question,quiz.answer);
@@ -49,6 +53,7 @@ console.log("Your Total Score is: "+score)
 
 console.log("------------------------------------")
 
+//checking if the user is a high scorer or not.
 for(i=0;i<highScore.length;i++){
   var check=highScore[i];
   if(score<check.score){

@@ -42,7 +42,19 @@ var questions=[{question: "What is my full name? ",
               {question: "Where do I live? ", 
                answer:"ankleshwar"},
               {question:"Where did i completed my school? ", 
-               answer:"ellenabad"}];
+               answer:"ellenabad"},
+               {
+                question: "What is my favourite color?",
+                answer: "red"
+              },
+              {
+                question: "Which college do I go to? ",
+                answer: "lpu"
+              },
+              {
+                question: "What is my mother tongue? ",
+                answer: "oriya"
+              }];
 
 //calling function
 for (i=0;i<questions.length;i++){
